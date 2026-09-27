@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const move_speed = 1750 
+const MOVE_SPEED = 1750 
 
 var current_look_dir = "right"
 
@@ -16,7 +16,7 @@ func _physics_process(_delta: float) -> void:
 		Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	).normalized()
 
-	velocity = input * move_speed
+	velocity = input * MOVE_SPEED
 	move_and_slide()
 
 
